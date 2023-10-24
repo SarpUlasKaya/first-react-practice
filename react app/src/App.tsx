@@ -1,6 +1,16 @@
-import Alert from "./components/Alert";
+import Button from "./components/Button";
+//import Alert from "./components/Alert";
 //import ListGroup from "./components/ListGroup";
 
+function App() {
+  return (
+    <div>
+      <Button onClick={() => console.log("Button Clicked.")}>My Button</Button>
+    </div>
+  );
+}
+
+/*
 function App() {
   return (
     <div>
@@ -11,7 +21,6 @@ function App() {
   );
 }
 
-/*
 function App() {
   let cities = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
   const handleSelectItem = (item: String) => {
