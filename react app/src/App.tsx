@@ -2,10 +2,17 @@ import ListGroup from "./components/ListGroup";
 
 function App() {
   let cities = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+  const handleSelectItem = (item: String) => {
+    console.log(item);
+  };
 
   return (
     <div>
-      <ListGroup items={cities} header="List of Cities" />
+      <ListGroup
+        items={cities}
+        header="List of Cities"
+        onSelectItem={handleSelectItem}
+      />
     </div>
   );
 }
