@@ -1,5 +1,17 @@
-import ListGroup from "./components/ListGroup";
+import Alert from "./components/Alert";
+//import ListGroup from "./components/ListGroup";
 
+function App() {
+  return (
+    <div>
+      <Alert>
+        EXTREME <span>DANGER</span>
+      </Alert>
+    </div>
+  );
+}
+
+/*
 function App() {
   let cities = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
   const handleSelectItem = (item: String) => {
@@ -16,5 +28,6 @@ function App() {
     </div>
   );
 }
+*/
 
 export default App;
