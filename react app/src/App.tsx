@@ -1,48 +1,22 @@
 import { useState } from "react";
 import Button from "./components/Button";
 import Alert from "./components/Alert";
-//import ListGroup from "./components/ListGroup";
+import Question from "./components/Question";
 
 function App() {
-  const [alertVisible, setAlertVisibility] = useState(false);
+  const [yesCount, setYesCount] = useState(0);
+  const [noCount, setNoCount] = useState(0);
 
   return (
     <div>
-      {alertVisible && (
-        <Alert onClose={() => setAlertVisibility(false)}>ALERT</Alert>
-      )}
-      <Button onClick={() => setAlertVisibility(true)}>My Button</Button>
-    </div>
-  );
-}
-
-/*
-function App() {
-  return (
-    <div>
-      <Alert>
-        EXTREME <span>DANGER</span>
-      </Alert>
-    </div>
-  );
-}
-
-function App() {
-  let cities = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
-  const handleSelectItem = (item: String) => {
-    console.log(item);
-  };
-
-  return (
-    <div>
-      <ListGroup
-        items={cities}
-        header="List of Cities"
-        onSelectItem={handleSelectItem}
+      <Question
+        imgUrl=""
+        qIndex={1}
+        onClickYes={() => setYesCount(yesCount + 1)}
+        onClickNo={() => setNoCount(noCount + 1)}
       />
     </div>
   );
 }
-*/
 
 export default App;
