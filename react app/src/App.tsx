@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Question from "./components/Question";
-import Img1 from "./images/Q1.jpg";
+import { images } from "./images";
 
 function App() {
   const [yesCount, setYesCount] = useState(0);
@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Question
-        imgUrl={Img1}
+        imgUrl={images[0]}
         qIndex={1}
         onClickYes={() => setYesCount(yesCount + 1)}
         onClickNo={() => setNoCount(noCount + 1)}
